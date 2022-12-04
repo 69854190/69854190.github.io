@@ -39,6 +39,8 @@ body {
     color: #34495e;
     overflow-x: hidden;
     overflow-y: auto;
+	background-attachment: fixed;
+	
 }
 
 h1 {
@@ -280,7 +282,7 @@ nav {
 }
 
 header .nav-transparent {
-   /* background-color: transparent !important;*/
+    background-color: transparent !important;
     background-color: FFB6C1FF;
     background-image: none;
     box-shadow: none;
