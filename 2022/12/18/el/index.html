@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="不如自成宇宙">
+    <meta name="keywords" content="EL表达式, 不如自成宇宙">
     <meta name="description" content="记录自己的后端学习">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>不如自成宇宙</title>
+    <title>EL表达式 | 不如自成宇宙</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -419,12 +419,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">EL表达式</h1>
                 </div>
             </div>
         </div>
@@ -538,12 +538,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/javaWeb/" class="post-category">
+                                    javaWeb
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -561,7 +574,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    78
+                    418
                 </div>
                 
 
@@ -578,15 +591,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title:</p>
-<p>   EL表达式</p>
-<p>categories: </p>
-<p>     javaWeb</p>
-<p>tags:</p>
-<p>  Java</p>
-<h2 id="一、-EL表达式概述"><a href="#一、-EL表达式概述" class="headerlink" title="一、 EL表达式概述"></a>一、 EL表达式概述</h2><p>  概念：Expression Language表达式语言,用于简化JSP页面内的Java代码。</p>
-<p>  主要功能：获取数据。</p>
-<p>  语法：${Expression表达式内容:<font color="#dd0000"></font>}</p>
+                <h2 id="一、-EL表达式概述"><a href="#一、-EL表达式概述" class="headerlink" title="一、 EL表达式概述"></a>一、 EL表达式概述</h2><h4 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h4><p>  Expression Language表达式语言,用于简化JSP页面内的Java代码。</p>
+<h4 id="主要功能："><a href="#主要功能：" class="headerlink" title="主要功能："></a>主要功能：</h4><p>  获取数据。</p>
+<h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><p>  <font color=red>${Expression表达式内容:</font>}</p>
 <table>
 <thead>
 <tr>
@@ -598,9 +605,31 @@
 <tbody><tr>
 <td>&lt;% out.println(request.getAttribute(“userName”));%&gt;</td>
 <td>&lt;%&#x3D;request.getAttribute(“userName”)%&gt;</td>
-<td>${userName}<font color="#dd0000"></font></td>
+<td><font color=red>${userName}</font></td>
 </tr>
 </tbody></table>
+<p><font color=red>注意:</font>  有些时候我们使用EL表达式来获取后端塞在请求域的数据时，发现获取不到，这是因为jsp默认开启了 <font color=pink>isELIgnored </font>这个属性，它的作用是忽略EL表达式。所以我们必须要将它给关闭了。</p>
+<p>    <code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; isELIgnored=&quot;false&quot; %&gt;</code></p>
+<p>JavaWeb的四大域对象：</p>
+<ol>
+<li><p>page: 当前页面有效</p>
+</li>
+<li><p>request: 当前请求有效</p>
+</li>
+<li><p>session: 当前会话有效</p>
+</li>
+<li><p>application: 当前应用有效</p>
+<p><font color=red>EL表达式获取数据，会依次从这4个域中寻找，直到找到为止</font></p>
+</li>
+</ol>
+<h2 id="二、-EL运算符"><a href="#二、-EL运算符" class="headerlink" title="二、 EL运算符"></a>二、 EL运算符</h2><h4 id="EL算术运算符"><a href="#EL算术运算符" class="headerlink" title="EL算术运算符"></a>EL算术运算符</h4><img src="file:///C:/Users/zhoutianming/AppData/Roaming/marktext/images/2022-12-18-21-50-35-image.png" title="" alt="" width="317">
+
+<p><font color=red>注意：</font>EL的”+”运算符无法拼字符串，如果该运算符连接的两个值不能转换为数值型的字符串，则会抛出异常。EL表达式中可以用()改变优先级。</p>
+<h4 id="EL比较运算符"><a href="#EL比较运算符" class="headerlink" title="EL比较运算符"></a>EL比较运算符</h4><p><img src="C:\Users\zhoutianming\AppData\Roaming\marktext\images\2022-12-18-21-58-30-image.png"></p>
+<h4 id="EL其他运算符："><a href="#EL其他运算符：" class="headerlink" title="EL其他运算符："></a>EL其他运算符：</h4><p>.和[ ]</p>
+<p><font color=yellow>.</font>和 <font color=yellow>[ ]</font>用来访问JavaBean中的属性和隐式对象的数据，一般情况下，.用来访问JavaBean属性或Map类型的值，<font color=yellow>[ ]</font>用来访问数组或者列表的元素。当存取的属性名称中包含特殊字符就一定要使用[ ],如果要获取动态取值用[ ], .无法动态取值。</p>
+<p>empty</p>
+<p>empty用来判断EL表达式中的对象或者变量是否为空。为空或者null返回true，否则返回false。</p>
 
                 
             </div>
@@ -664,7 +693,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -841,9 +874,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="EL表达式">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">EL表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -858,13 +891,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            zhoutianming
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/javaWeb/" class="post-category">
+                                        javaWeb
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1103,7 +1148,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">449</span>&nbsp;字
+                class="white-color">787</span>&nbsp;字
             
             
             
