@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2022/12/18/el/"/>
+      <url>/2022/12/18/el/</url>
+      
+        <content type="html"><![CDATA[<p>title:</p><p>   EL表达式</p><p>categories: </p><p>     javaWeb</p><p>tags:</p><p>  Java</p><h2 id="一、-EL表达式概述"><a href="#一、-EL表达式概述" class="headerlink" title="一、 EL表达式概述"></a>一、 EL表达式概述</h2><p>  概念：Expression Language表达式语言,用于简化JSP页面内的Java代码。</p><p>  主要功能：获取数据。</p><p>  语法：${Expression表达式内容:<font color="#dd0000"></font>}</p><table><thead><tr><th>Java代码块</th><th>JSP表达式</th><th>EL表达式</th></tr></thead><tbody><tr><td>&lt;% out.println(request.getAttribute(“userName”));%&gt;</td><td>&lt;%&#x3D;request.getAttribute(“userName”)%&gt;</td><td>${userName}<font color="#dd0000"></font></td></tr></tbody></table>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>文章标题</title>
       <link href="/2022/12/04/ce-shi-3/"/>
       <url>/2022/12/04/ce-shi-3/</url>
