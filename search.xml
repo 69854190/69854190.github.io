@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title>text</title>
-      <link href="/2023/03/13/text/"/>
-      <url>/2023/03/13/text/</url>
+      <title>图片插入测试</title>
+      <link href="/2023/04/07/tu-pian-cha-ru-ce-shi/"/>
+      <url>/2023/04/07/tu-pian-cha-ru-ce-shi/</url>
       
-        <content type="html"><![CDATA[<img src="/.io//03/13/text/a.jpg" class title="我是图片描述">]]></content>
+        <content type="html"><![CDATA[<h1 id="hexo插入图片方式汇总"><a href="#hexo插入图片方式汇总" class="headerlink" title="hexo插入图片方式汇总"></a>hexo插入图片方式汇总</h1><p>1、本地图片复制粘贴：删除第一个和最后一个<br><img src="/.io//%5Cimages%5Cpasted-2.png" alt="upload successful"><br>2、在source中新建一个images目录存放图片<img src="/images/pasted-0.png" alt="描述"><br>3、通过&lt;% asset_img 图片与md文件同名文件夹下%&gt;<br>&lt;% asset_img a.jpg 描述 %&gt;(失败)</p><p>4、插入网络图片：<img src="http://rs43ryrv3.bkt.clouddn.com/2023/03/29/db8a13f2c62c48749d1147bc2c93a423.jpg" alt="描述"></p>]]></content>
       
       
+      <categories>
+          
+          <category> markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown语法 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -36,51 +48,6 @@
             <tag> Java </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>文章标题</title>
-      <link href="/2022/12/04/ce-shi-3/"/>
-      <url>/2022/12/04/ce-shi-3/</url>
-      
-        <content type="html"><![CDATA[<p>  就将计就计就你济南济南今年今年九年级你就能技能技能技能技能九年级那就你就能九年级那就你就能就你济南济南你家极简你就能就能就呢就叫你就今年今年九年级解决比较技能九年级1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222</p><p>  斤斤计较就看拮抗剂拮抗剂开卷考那就看见就看见哦i急急急</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2022/12/03/ce-shi/"/>
-      <url>/2022/12/03/ce-shi/</url>
-      
-        <content type="html"><![CDATA[<p>#测试贴</p><p>简介：测试帖子胡乱编辑</p><p>内容：皇家海军的成绩很好的哈哈哈哈就好机会环境保护部会被回家吧货币环境保护不好不会吧会不会不会吧会不会不好不会吧回家吧好吧好吧好吧不好不会吧会被会不会不会吧会不会不好不好不会吧好不好1好环境不会加班还不回家不会吧就会被好吧好吧好吧和312接口南京江宁就看见1就货币环境保护吧好吧好吧好吧3变化不会吧好不好不好不回家不仅获奖绝不会把不4和就把还不会吧会不会白金卡</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/12/01/hello-world/"/>
-      <url>/2022/12/01/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
