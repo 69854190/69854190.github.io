@@ -158,7 +158,7 @@
     loaded();
 })()
  </script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="不如自成宇宙" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 
 
@@ -702,7 +702,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    778
+                    752
                 </div>
                 
 
@@ -714,81 +714,82 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h5 id="一、作用："><a href="#一、作用：" class="headerlink" title="一、作用："></a>一、作用：</h5><p>1、检验字符串是否满足规则。<br>2、在一段文本中查找满足要求的内容。</p>
-<h5 id="二、基本规则："><a href="#二、基本规则：" class="headerlink" title="二、基本规则："></a>二、基本规则：</h5><p><img src="/medias/loading.gif" data-original="/.io//%5Cimages%5C2023-04-08-01.png"><br><img src="/medias/loading.gif" data-original="/.io//%5Cimages%5C2023-04-08-02.png"><br><img src="/medias/loading.gif" data-original="/.io//%5Cimages%5C2023-04-08-03.png"><br><img src="/medias/loading.gif" data-original="/.io//%5Cimages%5Ctest%5Cpasted-3.png"></p>
+<h5 id="二、基本规则："><a href="#二、基本规则：" class="headerlink" title="二、基本规则："></a>二、基本规则：</h5><p><img src="/medias/loading.gif" data-original="/images/2023-04-08-01.png"><br><img src="/medias/loading.gif" data-original="/images/2023-04-08-02.png"><br><img src="/medias/loading.gif" data-original="/images/2023-04-08-03.png"> </p>
 <h5 id="三、应用场景"><a href="#三、应用场景" class="headerlink" title="三、应用场景"></a>三、应用场景</h5><p>1、验证手机号码格式。  </p>
-<pre class=" language-java"><code class="language-java">
-<span class="token comment" spellcheck="true">//方法:写一个正确格式的数据从左到右依次书写</span>
- <span class="token comment" spellcheck="true">//手机号格式:以1开头，第二位范围3-9，剩余9位任意数字范围</span>
- String regex<span class="token operator">=</span><span class="token string">"1[3-9]\\d&amp;#123;9&amp;#125;"</span><span class="token punctuation">;</span>
- System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"12234567899"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//false</span>
- System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"13412345678"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//true</span>
- System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"134123456789"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//false</span>
- 
-</code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">
+<span class="token comment">//方法:写一个正确格式的数据从左到右依次书写</span>
+ <span class="token comment">//手机号格式:以1开头，第二位范围3-9，剩余9位任意数字范围</span>
+ <span class="token class-name">String</span> regex<span class="token operator">=</span><span class="token string">"1[3-9]\\d&#123;9&#125;"</span><span class="token punctuation">;</span>
+ <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"12234567899"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
+ <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"13412345678"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
+ <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"134123456789"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
+ <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>2、验证邮箱格式。   </p>
-<pre class=" language-java"><code class="language-java">
-<span class="token comment" spellcheck="true">/* 思路：@的左边，任意字母数字下划线至少出现一次\\w+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">
+<span class="token comment">/* 思路：@的左边，任意字母数字下划线至少出现一次\\w+
  @只能出现一次
- .的左边，任意字母数字除下划线，出现2-7次[\\w&amp;&amp;[^_]]&amp;#123;2,7&amp;#125;
+ .的左边，任意字母数字除下划线，出现2-7次[\\w&amp;&amp;[^_]]&#123;2,7&#125;
  .用\\.表示（转义）
  .的右边：任意大小写字母，出现2-3次，整个.的右边可以看作一组重复1-2次*/</span>
- String regex <span class="token operator">=</span> <span class="token string">"\\w+@[\\w&amp;&amp;[^_]]&amp;#123;2,7&amp;#125;(\\.[a-zA-Z]&amp;#123;2,3&amp;#125;)&amp;#123;1,2&amp;#125;"</span><span class="token punctuation">;</span>
- System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"123@qq.com"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//true</span>
- System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"123@@qq.com"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//false</span>
- System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"123@q.com"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//false</span>
- System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"1232@123.com.cn"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//true</span>
- 
-</code></pre>
+ <span class="token class-name">String</span> regex <span class="token operator">=</span> <span class="token string">"\\w+@[\\w&amp;&amp;[^_]]&#123;2,7&#125;(\\.[a-zA-Z]&#123;2,3&#125;)&#123;1,2&#125;"</span><span class="token punctuation">;</span>
+ <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"123@qq.com"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
+ <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"123@@qq.com"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
+ <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"123@q.com"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
+ <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"1232@123.com.cn"</span><span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
+ <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>　　正则表达式不用刻意记其规则，能看懂就行，使用时只需要百度然后改成自己需要的就行。可以安装Idea的插件any-rule，在使用时只需右键单击AnyRule就可以选择自己所需要的表达式（注意转义)。</p>
 <h5 id="四、正则表达式爬取信息"><a href="#四、正则表达式爬取信息" class="headerlink" title="四、正则表达式爬取信息"></a>四、正则表达式爬取信息</h5><p>1、爬取本地文本信息：</p>
-<pre class=" language-java"><code class="language-java">
- <span class="token comment" spellcheck="true">//从指定内容爬取出邮箱和手机号</span>
-       String content<span class="token operator">=</span><span class="token string">"大家好，我是练习时长两年半的个人练习生，蔡旭坤，"</span> <span class="token operator">+</span>
-               <span class="token string">"喜欢唱跳rap篮球，我的手机号bu是13212345678，我的邮箱bu是123@321.com,谢谢大家！只因你太美 baby~~~"</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//1.定义爬取规则(多个规则用|隔开)</span>
-        String regex<span class="token operator">=</span><span class="token string">"1[3-9]\\d&amp;#123;9&amp;#125;|"</span><span class="token operator">+</span><span class="token string">"\\w+@[\\w&amp;&amp;[^_]]&amp;#123;2,7&amp;#125;(\\.[a-zA-Z]&amp;#123;2,3&amp;#125;)&amp;#123;1,2&amp;#125;"</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//2.调用Pattern的compile方法编译正则表达式，获取匹配规则对象</span>
-        Pattern pattern <span class="token operator">=</span> Pattern<span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//3.通过匹配器规则对象获取匹配数据内容的匹配器对象</span>
-        Matcher matcher <span class="token operator">=</span> pattern<span class="token punctuation">.</span><span class="token function">matcher</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//4.find()匹配数据内容的匹配器会从头开始读取寻找满足规则的字串，</span>
-        <span class="token comment" spellcheck="true">// 如果有返回true会在底层记录字串的起始索引和结束索引+1</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">
+<span class="token comment">//从指定内容爬取出邮箱和手机号</span>
+      <span class="token class-name">String</span> content<span class="token operator">=</span><span class="token string">"大家好，我是练习时长两年半的个人练习生，蔡旭坤，"</span> <span class="token operator">+</span>
+              <span class="token string">"喜欢唱跳rap篮球，我的手机号bu是13212345678，我的邮箱bu是123@321.com,谢谢大家！只因你太美 baby~~~"</span><span class="token punctuation">;</span>
+       <span class="token comment">//1.定义爬取规则(多个规则用|隔开)</span>
+       <span class="token class-name">String</span> regex<span class="token operator">=</span><span class="token string">"1[3-9]\\d&#123;9&#125;|"</span><span class="token operator">+</span><span class="token string">"\\w+@[\\w&amp;&amp;[^_]]&#123;2,7&#125;(\\.[a-zA-Z]&#123;2,3&#125;)&#123;1,2&#125;"</span><span class="token punctuation">;</span>
+       <span class="token comment">//2.调用Pattern的compile方法编译正则表达式，获取匹配规则对象</span>
+       <span class="token class-name">Pattern</span> pattern <span class="token operator">=</span> <span class="token class-name">Pattern</span><span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token comment">//3.通过匹配器规则对象获取匹配数据内容的匹配器对象</span>
+       <span class="token class-name">Matcher</span> matcher <span class="token operator">=</span> pattern<span class="token punctuation">.</span><span class="token function">matcher</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token comment">//4.find()匹配数据内容的匹配器会从头开始读取寻找满足规则的字串，</span>
+       <span class="token comment">// 如果有返回true会在底层记录字串的起始索引和结束索引+1</span>
 
-        <span class="token comment" spellcheck="true">//5.通过匹配器从内容中爬取信息</span>
-        <span class="token comment" spellcheck="true">//String group()方法底层会根据find()记录的索引进行截取，并返回截取到的字串</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        
-</code></pre>
+       <span class="token comment">//5.通过匹配器从内容中爬取信息</span>
+       <span class="token comment">//String group()方法底层会根据find()记录的索引进行截取，并返回截取到的字串</span>
+       <span class="token keyword">while</span> <span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+           <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">&#125;</span>
+       <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>2、爬取网络数据（可复制显示不了） </p>
-<pre class=" language-java"><code class="language-java">
-<span class="token comment" spellcheck="true">//创建一个URL对象</span>
-        URL url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">"http://so.qqdna.com/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//连接网站</span>
-        URLConnection urlConnection <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">openConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//创建字符缓冲流读取网站数据</span>
-        BufferedReader reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">InputStreamReader</span><span class="token punctuation">(</span>urlConnection<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        String line<span class="token punctuation">;</span>
-        String regex<span class="token operator">=</span><span class="token string">"1[3-9]\\d&amp;#123;9&amp;#125;"</span><span class="token punctuation">;</span>
-        Pattern pattern <span class="token operator">=</span> Pattern<span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//每次读取一行</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>line<span class="token operator">=</span>reader<span class="token punctuation">.</span><span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span>null<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            Matcher matcher <span class="token operator">=</span> pattern<span class="token punctuation">.</span><span class="token function">matcher</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">
+<span class="token comment">//创建一个URL对象</span>
+        <span class="token class-name">URL</span> url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">"http://so.qqdna.com/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//连接网站</span>
+        <span class="token class-name">URLConnection</span> urlConnection <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">openConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//创建字符缓冲流读取网站数据</span>
+        <span class="token class-name">BufferedReader</span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">InputStreamReader</span><span class="token punctuation">(</span>urlConnection<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> line<span class="token punctuation">;</span>
+        <span class="token class-name">String</span> regex<span class="token operator">=</span><span class="token string">"1[3-9]\\d&#123;9&#125;"</span><span class="token punctuation">;</span>
+        <span class="token class-name">Pattern</span> pattern <span class="token operator">=</span> <span class="token class-name">Pattern</span><span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//每次读取一行</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>line<span class="token operator">=</span>reader<span class="token punctuation">.</span><span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token class-name">Matcher</span> matcher <span class="token operator">=</span> pattern<span class="token punctuation">.</span><span class="token function">matcher</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
         reader<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-</code></pre>
-
+        <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -1298,7 +1299,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.3k</span>&nbsp;字
+                class="white-color">1.2k</span>&nbsp;字
             
             
             
@@ -1574,7 +1575,7 @@ $(function () {
 <script type="text/javascript" src="/libs/others/snow.js"></script> 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-hibiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false,"react":{"opacity":0.7}}});</script>
+
         <style>
             [bg-lazy] {
                 background-image: none !important;
@@ -1587,6 +1588,6 @@ $(function () {
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-hibiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false,"react":{"opacity":0.7}}});</script></body>
 
 </html>
