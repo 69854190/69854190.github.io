@@ -120,30 +120,6 @@
   </entry>
   
   <entry>
-    <title>图片插入测试</title>
-    <link href="https://69854190.github.io/git/2023/04/07/tu-pian-cha-ru-ce-shi/"/>
-    <id>https://69854190.github.io/git/2023/04/07/tu-pian-cha-ru-ce-shi/</id>
-    <published>2023-04-07T09:39:00.000Z</published>
-    <updated>2023-04-07T10:07:46.811Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="hexo插入图片方式汇总"><a href="#hexo插入图片方式汇总" class="headerlink" title="hexo插入图片方式汇总"></a>hexo插入图片方式汇总</h1><p>1、本地图片复制粘贴：删除第一个和最后一个<br><img src="/.io//%5Cimages%5Cpasted-2.png" alt="upload successful"><br>2、在source中新建一个images目录存放图片<img src="/images/pasted-0.png" alt="描述"><br>3、通过&lt;% asset_img 图片与md文件同名文件夹下%&gt;<br>&lt;% asset_img a.jpg 描述 %&gt;(失败)</p><p>4、插入网络图片：<img src="http://rs43ryrv3.bkt.clouddn.com/2023/03/29/db8a13f2c62c48749d1147bc2c93a423.jpg" alt="描述"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;hexo插入图片方式汇总&quot;&gt;&lt;a href=&quot;#hexo插入图片方式汇总&quot; class=&quot;headerlink&quot; title=&quot;hexo插入图片方式汇总&quot;&gt;&lt;/a&gt;hexo插入图片方式汇总&lt;/h1&gt;&lt;p&gt;1、本地图片复制粘贴：删除第一个和最后一个&lt;br&gt;&lt;img </summary>
-      
-    
-    
-    
-    <category term="markdown" scheme="https://69854190.github.io/git/categories/markdown/"/>
-    
-    
-    <category term="markdown语法" scheme="https://69854190.github.io/git/tags/markdown%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>EL表达式</title>
     <link href="https://69854190.github.io/git/2022/12/18/el/"/>
     <id>https://69854190.github.io/git/2022/12/18/el/</id>
